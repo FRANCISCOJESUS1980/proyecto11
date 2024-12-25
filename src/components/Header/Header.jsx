@@ -16,10 +16,14 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleMenuClose = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className='header-container'>
-        <Link to='/' className='logo'>
+        <Link to='/' className='logo' onClick={handleMenuClose}>
           <Cat className='cat-icon' />
           <span>Cat Explorer</span>
         </Link>
@@ -33,15 +37,15 @@ function Header() {
         </button>
 
         <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
-          <Link to='/' className='nav-link'>
+          <Link to='/' className='nav-link' onClick={handleMenuClose}>
             <Home className='nav-icon' />
             <span>Home</span>
           </Link>
-          <Link to='/search' className='nav-link'>
+          <Link to='/search' className='nav-link' onClick={handleMenuClose}>
             <Search className='nav-icon' />
             <span>Search</span>
           </Link>
-          <Link to='/favorites' className='nav-link'>
+          <Link to='/favorites' className='nav-link' onClick={handleMenuClose}>
             <Heart className='nav-icon' />
             <span>Favorites</span>
           </Link>
