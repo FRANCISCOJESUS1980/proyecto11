@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 function CatCard({ cat }) {
-  if (!cat || !cat.url) return null // Verifica si los datos del gato están disponibles
+  if (!cat || !cat.url) return null
 
   return (
     <div className='cat-card'>
@@ -12,7 +12,6 @@ function CatCard({ cat }) {
   )
 }
 
-// Validación de props con PropTypes
 CatCard.propTypes = {
   cat: PropTypes.shape({
     id: PropTypes.string.isRequired,
