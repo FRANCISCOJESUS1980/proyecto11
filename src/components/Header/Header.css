@@ -4,9 +4,10 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(to right, #2c3e50, #3498db);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  padding: 10px;
 }
 
 .header.scrolled {
@@ -39,7 +40,7 @@
 }
 
 .cat-icon {
-  color: #ff6b6b;
+  color: #e74c3c;
   stroke-width: 2.5;
 }
 
@@ -48,17 +49,23 @@
   gap: 2rem;
   align-items: center;
 }
+.nav-menu.open {
+  background-color: #74ebd5;
+  background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+}
 
 .nav-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: #666;
+  color: black;
   font-weight: 500;
   padding: 0.5rem;
   transition: all 0.3s ease;
   position: relative;
+
+  border-radius: 8px;
 }
 
 .nav-link::after {
@@ -74,6 +81,7 @@
 
 .nav-link:hover {
   color: #ff6b6b;
+  background: linear-gradient(to right, #2c3e50, #3498db);
 }
 
 .nav-link:hover::after {
@@ -94,7 +102,7 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  color: #666;
+  color: black;
   transition: color 0.3s ease;
 }
 

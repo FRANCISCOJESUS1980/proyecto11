@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import CatCard from '../components/CatCard'
-import Loader from '../components/Loader'
-import { fetchCats } from '../services/api'
+import CatCard from '../../CatCard/CatCard'
+import Loader from '../Loader/Loader'
+import { fetchCats } from '../../../services/api'
+import './home.css'
 
 function Home() {
   const [cats, setCats] = useState([])
