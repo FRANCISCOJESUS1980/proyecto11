@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { searchCats, fetchBreeds } from '../../../services/api'
 import './Search.css'
 import { Heart } from 'lucide-react'
@@ -76,21 +77,30 @@ function Search() {
         {cats.map((cat) => (
           <div key={cat.id} className='cat-card'>
             <img src={cat.url} alt='Cat' loading='lazy' />
-            <button
-              className={`favorite-button ${
-                isFavorite(cat.id) ? 'active' : ''
-              }`}
-              onClick={() => handleFavoriteClick(cat.id)}
-              aria-label={
-                isFavorite(cat.id)
-                  ? 'Remove from favorites'
-                  : 'Add to favorites'
-              }
-            >
-              <Heart
-                className={`heart-icon ${isFavorite(cat.id) ? 'filled' : ''}`}
-              />
-            </button>
+            <div className='card-buttons'>
+              <button
+                className={`icon-button favorite-button ${
+                  isFavorite(cat.id) ? 'active' : ''
+                }`}
+                onClick={() => handleFavoriteClick(cat.id)}
+                aria-label={
+                  isFavorite(cat.id)
+                    ? 'Remove from favorites'
+                    : 'Add to favorites'
+                }
+              >
+                <Heart
+                  className={`heart-icon ${isFavorite(cat.id) ? 'filled' : ''}`}
+                />
+              </button>
+              <Link
+                to={`/cat/${cat.id}`}
+                className='details-button'
+                aria-label='View cat details'
+              >
+                View Details
+              </Link>
+            </div>
           </div>
         ))}
       </div>

@@ -74,3 +74,54 @@
   border-radius: 8px;
   margin-bottom: 1rem;
 }
+/*
+.card-buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.icon-button {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.icon-button:hover {
+  transform: scale(1.1);
+}
+
+.details-button {
+  color: #666;
+  text-decoration: none;
+}
+
+.details-button:hover {
+  color: #333;
+}
+
+.info-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.favorite-button.active .heart-icon {
+  fill: #ff4757;
+  stroke: #ff4757;
+}
+
+.cat-card {
+  position: relative;
+}
+*/
