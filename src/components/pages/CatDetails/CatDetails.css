@@ -1,5 +1,4 @@
 .cat-details-container {
-  max-width: 1200px;
   margin: 80px auto 2rem;
   padding: 0 1rem;
 }
@@ -8,7 +7,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: black;
+  color: var(--segundo-color);
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -18,15 +17,15 @@
 }
 
 .back-button:hover {
-  background: linear-gradient(to right, #2c3e50, #3498db);
-  color: #ff6b6b;
+  background: var(--background);
+  color: var(--background-color1);
 }
 
 .cat-details-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  background: white;
+  background: var(--background-color3);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -72,18 +71,18 @@
 }
 
 .favorite-button.active {
-  background: #ff6b6b;
+  background: var(--background-color1);
 }
 
 .favorite-button.active .heart-icon {
-  color: white;
-  fill: white;
+  color: var(--primer-color);
+  fill: var(--primer-color);
 }
 
 .heart-icon {
   width: 24px;
   height: 24px;
-  color: #ff6b6b;
+  color: var(--background-color1);
   transition: all 0.3s ease;
 }
 
@@ -93,7 +92,7 @@
 
 .cat-info h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: var(--tercer-color);
   margin-bottom: 1.5rem;
 }
 
@@ -108,7 +107,7 @@
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  background: #f8f9fa;
+  background: #d7d8d8;
   border-radius: 12px;
   transition: transform 0.3s ease;
 }
@@ -118,18 +117,18 @@
 }
 
 .info-item svg {
-  color: #ff6b6b;
+  color: var(--background-color1);
   flex-shrink: 0;
 }
 
 .info-item h3 {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--cuarto-color);
   margin-bottom: 0.25rem;
 }
 
 .info-item p {
-  color: #333;
+  color: var(--tercer-color);
   font-weight: 500;
 }
 
@@ -141,12 +140,12 @@
 
 .description h2 {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--tercer-color);
   margin-bottom: 1rem;
 }
 
 .description p {
-  color: #666;
+  color: var(--cuarto-color);
   line-height: 1.6;
 }
 
@@ -154,23 +153,23 @@
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  background: #ff6b6b;
-  color: white;
+  background: var(--background-color1);
+  color: var(--primer-color);
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .wiki-link:hover {
-  background: #ff5252;
+  background: var(--background-image);
   transform: translateY(-2px);
 }
 
 .error-message {
   text-align: center;
   padding: 2rem;
-  background: #ffe5e5;
-  color: #ff5252;
+  background: var(--quinto-color);
+  color: var(--background-color1);
   border-radius: 8px;
   margin: 2rem auto;
   max-width: 600px;

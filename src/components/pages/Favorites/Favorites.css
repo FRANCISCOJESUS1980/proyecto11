@@ -35,8 +35,8 @@
   left: 0;
   right: 0;
   padding: 0.75rem;
-  background: rgba(255, 107, 107, 0.9);
-  color: white;
+  background: var(--background-image);
+  color: var(--primer-color);
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -50,7 +50,7 @@
 }
 
 .remove-favorite:hover {
-  background: rgba(255, 82, 82, 0.9);
+  background: var(--background-color1);
 }
 
 .no-favorites {
@@ -64,11 +64,11 @@
 .favorites-loading {
   text-align: center;
   padding: 3rem;
-  color: #666;
+  color: var(--cuarto-color);
 }
 
 .favorites-error {
-  color: #ff5252;
+  color: var(--background-color1);
   padding: 1rem;
   background: #ffe5e5;
   border-radius: 8px;

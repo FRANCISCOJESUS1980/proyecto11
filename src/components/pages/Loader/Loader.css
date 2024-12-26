@@ -1,5 +1,5 @@
 .loader {
   text-align: center;
   margin-top: 20px;
-  color: #e74c3c;
+  color: var(--background-color1);
 }
