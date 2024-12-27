@@ -18,7 +18,7 @@
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: var(--rc-padding2) var(--rc-padding3);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,11 +62,10 @@
   text-decoration: none;
   color: var(--segundo-color);
   font-weight: 500;
-  padding: 0.5rem;
+  padding: var(--rc-padding1);
   transition: all 0.3s ease;
   position: relative;
-
-  border-radius: 8px;
+  border-radius: var(--rc-border-radius2);
 }
 
 .nav-link::after {
@@ -101,7 +100,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: var(--rc-padding1);
   color: var(--segundo-color);
   transition: color 0.3s ease;
 }
@@ -122,7 +121,7 @@
     right: 0;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 1rem;
+    padding: var(--rc-padding2);
     flex-direction: column;
     gap: 1rem;
     transform: translateY(-100%);

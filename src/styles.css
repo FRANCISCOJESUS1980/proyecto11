@@ -15,6 +15,17 @@
   --tercer-color: #333;
   --cuarto-color: #666;
   --quinto-color: #bdc3c7;
+
+  --rc-border-radius1: 4px;
+  --rc-border-radius2: 8px;
+  --rc-border-radius3: 12px;
+  --rc-border-radius4: 16px;
+
+  --rc-padding1: 0.5rem;
+  --rc-padding2: 1rem;
+  --rc-padding3: 2rem;
+  --rc-padding4: 3rem;
+  --rc-padding5: 4rem;
 }
 
 body {
@@ -33,11 +44,11 @@ h1 {
 .button {
   padding: 10px;
   background: var(--background);
-  color: white;
+  color: var(--primer-color);
   margin-top: 50px;
-  border-radius: 8px;
+  border-radius: var(--rc-border-radius2);
   transition: all 0.3s ease;
 }
 .button:hover {
-  color: #e74c3c;
+  color: var(--background-color1);
 }

@@ -1,5 +1,5 @@
 .favorites-container {
-  padding: 2rem;
+  padding: var(--rc-padding3);
   max-width: 1200px;
   margin: 80px auto 0;
 }
@@ -13,7 +13,7 @@
 
 .favorite-card {
   position: relative;
-  border-radius: 12px;
+  border-radius: var(--rc-border-radius3);
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -55,23 +55,23 @@
 
 .no-favorites {
   text-align: center;
-  padding: 3rem;
+  padding: var(--rc-padding4);
   background: #f8f9fa;
-  border-radius: 12px;
+  border-radius: var(--rc-border-radius3);
   margin-top: 2rem;
 }
 
 .favorites-loading {
   text-align: center;
-  padding: 3rem;
+  padding: var(--rc-padding4);
   color: var(--cuarto-color);
 }
 
 .favorites-error {
   color: var(--background-color1);
-  padding: 1rem;
+  padding: var(--rc-padding2);
   background: #ffe5e5;
-  border-radius: 8px;
+  border-radius: var(--rc-border-radius2);
   margin: 2rem auto;
   max-width: 600px;
   text-align: center;

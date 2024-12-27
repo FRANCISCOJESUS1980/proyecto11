@@ -1,6 +1,6 @@
 .cat-details-container {
   margin: 80px auto 2rem;
-  padding: 0 1rem;
+  padding: 0 var(--rc-padding2);
 }
 
 .back-button {
@@ -9,8 +9,8 @@
   gap: 0.5rem;
   color: var(--segundo-color);
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: var(--rc-padding1) var(--rc-padding2);
+  border-radius: var(--rc-border-radius2);
   transition: all 0.3s ease;
   margin-bottom: 2rem;
   margin-top: 40px;
@@ -26,7 +26,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   background: var(--background-color3);
-  border-radius: 16px;
+  border-radius: var(--rc-border-radius4);
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -87,7 +87,7 @@
 }
 
 .cat-info {
-  padding: 2rem;
+  padding: var(--rc-padding3);
 }
 
 .cat-info h1 {
@@ -106,9 +106,9 @@
 .info-item {
   display: flex;
   gap: 1rem;
-  padding: 1rem;
+  padding: var(--rc-padding2);
   background: #d7d8d8;
-  border-radius: 12px;
+  border-radius: var(--rc-border-radius3);
   transition: transform 0.3s ease;
 }
 
@@ -134,7 +134,7 @@
 
 .description {
   margin-top: 2rem;
-  padding-top: 2rem;
+  padding-top: var(--rc-padding3);
   border-top: 1px solid #eee;
 }
 
@@ -156,7 +156,7 @@
   background: var(--background-color1);
   color: var(--primer-color);
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: var(--rc-border-radius2);
   transition: all 0.3s ease;
 }
 
@@ -167,10 +167,10 @@
 
 .error-message {
   text-align: center;
-  padding: 2rem;
+  padding: var(--rc-padding3);
   background: var(--quinto-color);
   color: var(--background-color1);
-  border-radius: 8px;
+  border-radius: var(--rc-border-radius2);
   margin: 2rem auto;
   max-width: 600px;
 }

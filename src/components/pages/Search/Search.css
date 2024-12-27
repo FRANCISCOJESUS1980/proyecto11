@@ -1,20 +1,24 @@
 .search-container {
-  padding: 2rem;
+  padding: var(--rc-padding3);
   max-width: 1200px;
-  margin: 80px auto 0;
+  margin: 90px 0;
 }
 
 .search-form {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+}
+h2 {
+  align-self: center;
 }
 
 .breed-select {
   flex: 1;
-  padding: 0.5rem;
+  padding: var(--rc-padding1);
   border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: var(--rc-border-radius2);
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
@@ -25,11 +29,11 @@
 }
 
 .search-form button {
-  padding: 0.5rem 2rem;
+  padding: var(--rc-padding1) var(--rc-padding3);
   background: var(--background-color1);
   color: var(--primer-color);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--rc-border-radius2);
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -51,7 +55,7 @@
 }
 
 .cat-card {
-  border-radius: 12px;
+  border-radius: var(--rc-border-radius3);
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -69,8 +73,8 @@
 
 .error-message {
   color: var(--background-color1);
-  padding: 1rem;
+  padding: var(--rc-padding2);
   background: var(--quinto-color);
-  border-radius: 8px;
+  border-radius: var(--rc-border-radius2);
   margin-bottom: 1rem;
 }
