@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { fetchCatDetails } from '../../../services/api'
+import Loader from '../Loader/Loader'
 import './Favorites.css'
 
 function Favorites() {
@@ -13,6 +14,7 @@ function Favorites() {
 
   const loadFavorites = async () => {
     try {
+      setLoading(true)
       const favoritesIds =
         JSON.parse(localStorage.getItem('catFavorites')) || []
       const favoritesDetails = await Promise.all(
@@ -21,7 +23,7 @@ function Favorites() {
       setFavorites(favoritesDetails)
     } catch (error) {
       setError('Failed to load favorites')
-      console.log(error)
+      console.error(error)
     } finally {
       setLoading(false)
     }
@@ -34,16 +36,20 @@ function Favorites() {
     setFavorites(favorites.filter((fav) => fav.id !== id))
   }
 
-  if (loading)
-    return <div className='favorites-loading'>Loading favorites...</div>
-  if (error) return <div className='favorites-error'>{error}</div>
+  if (loading) {
+    return <Loader />
+  }
+
+  if (error) {
+    return <div className='favorites-error'>{error}</div>
+  }
 
   return (
     <div className='favorites-container'>
       <h2>My Favorite Cats</h2>
       {favorites.length === 0 ? (
         <div className='no-favorites'>
-          <p>No tienes ningun gato como favorito!</p>
+          <p>No tienes ningún gato como favorito!</p>
         </div>
       ) : (
         <div className='favorites-grid'>

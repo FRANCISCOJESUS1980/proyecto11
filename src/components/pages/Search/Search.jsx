@@ -4,14 +4,14 @@ import { searchCats, fetchBreeds } from '../../../services/api'
 import './Search.css'
 import { Heart } from 'lucide-react'
 import { useFavorites } from '../../../components/hooks/useFavorites'
+import Loader from '../Loader/Loader'
 
 function Search() {
   const [breeds, setBreeds] = useState([])
   const [selectedBreed, setSelectedBreed] = useState('')
   const [cats, setCats] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-
   const { isFavorite, addFavorite, removeFavorite } = useFavorites()
 
   const handleFavoriteClick = (catId) => {
@@ -25,11 +25,14 @@ function Search() {
   useEffect(() => {
     const loadBreeds = async () => {
       try {
+        setLoading(true)
         const breedsData = await fetchBreeds()
         setBreeds(breedsData)
       } catch (error) {
         setError('Failed to load breeds')
         console.log(error)
+      } finally {
+        setLoading(false)
       }
     }
     loadBreeds()
@@ -48,6 +51,10 @@ function Search() {
     } finally {
       setLoading(false)
     }
+  }
+
+  if (loading) {
+    return <Loader />
   }
 
   return (
