@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { fetchCatDetails } from '../../../services/api'
 import { Heart, ArrowLeft, Info } from 'lucide-react'
@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'
 
 function CatDetails() {
   const { id } = useParams()
+  const navigate = useNavigate() // Hook para manejar navegación
   const [cat, setCat] = useState(null)
   const [loading, setLoading] = useState(false)
   const { isFavorite, addFavorite, removeFavorite } = useFavorites()
@@ -44,9 +45,10 @@ function CatDetails() {
 
   return (
     <div className='cat-details-container'>
-      <Link to='/' className='back-button'>
-        <ArrowLeft /> Back to Home
-      </Link>
+      {/* Botón para volver a la página anterior */}
+      <button onClick={() => navigate(-1)} className='back-button'>
+        <ArrowLeft /> Back
+      </button>
 
       <div className='cat-details-content'>
         <div className='cat-image-container'>
