@@ -1,25 +1,32 @@
-/*import './Footer.css'
-function Footer() {
-  return (
-    <footer>
-      <p>Cat Explorer © {new Date().getFullYear()}</p>
-    </footer>
-  )
-}
-
-export default Footer*/
 import {
-  Facebook,
-  Twitter,
-  Instagram,
+  Facebook as FacebookIcon,
+  Twitter as TwitterIcon,
+  Instagram as InstagramIcon,
   Mail,
   Phone,
   MapPin,
   Heart
 } from 'lucide-react'
 import './Footer.css'
+import { useState } from 'react'
 
 function Footer() {
+  const [email, setEmail] = useState('')
+
+  const handleSubscription = (event) => {
+    event.preventDefault()
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    if (!emailRegex.test(email)) {
+      alert('Por favor, ingresa un correo electrónico válido.')
+      return
+    }
+
+    alert('Ya estás suscrito, pronto te llegarán las notificaciones.')
+    setEmail('')
+  }
+
   return (
     <footer className='footer'>
       <div className='footer-content'>
@@ -32,13 +39,13 @@ function Footer() {
           </p>
           <div className='social-links'>
             <a href='https://www.facebook.com/' aria-label='Facebook'>
-              <Facebook className='icon' />
+              <FacebookIcon className='icon' />
             </a>
             <a href='https://x.com/' aria-label='Twitter'>
-              <Twitter className='icon' />
+              <TwitterIcon className='icon' />
             </a>
             <a href='https://www.instagram.com/' aria-label='Instagram'>
-              <Instagram className='icon' />
+              <InstagramIcon className='icon' />
             </a>
           </div>
         </div>
@@ -61,8 +68,13 @@ function Footer() {
         <div className='footer-section'>
           <h4>Newsletter</h4>
           <p>Suscríbete para recibir noticias y actualizaciones</p>
-          <form className='newsletter-form'>
-            <input type='email' placeholder='Tu correo electrónico' />
+          <form className='newsletter-form' onSubmit={handleSubscription}>
+            <input
+              type='email'
+              placeholder='Tu correo electrónico'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             <button type='submit'>Suscribirse</button>
           </form>
         </div>
