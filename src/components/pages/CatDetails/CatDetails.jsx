@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 
 function CatDetails() {
   const { id } = useParams()
-  const navigate = useNavigate() // Hook para manejar navegación
+  const navigate = useNavigate()
   const [cat, setCat] = useState(null)
   const [loading, setLoading] = useState(false)
   const { isFavorite, addFavorite, removeFavorite } = useFavorites()
@@ -45,7 +45,6 @@ function CatDetails() {
 
   return (
     <div className='cat-details-container'>
-      {/* Botón para volver a la página anterior */}
       <button onClick={() => navigate(-1)} className='back-button'>
         <ArrowLeft /> Back
       </button>
