@@ -7,8 +7,10 @@ import {
   MapPin,
   Heart
 } from 'lucide-react'
+import swalWithCustomClass from '../../utils/swalInstance'
 import './Footer.css'
 import { useState } from 'react'
+import '../../utils/custom-alerts.css'
 
 function Footer() {
   const [email, setEmail] = useState('')
@@ -19,11 +21,22 @@ function Footer() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
     if (!emailRegex.test(email)) {
-      alert('Por favor, ingresa un correo electrónico válido.')
+      swalWithCustomClass.fire({
+        icon: 'error',
+        title: 'Correo inválido',
+        text: 'Por favor, ingresa un correo electrónico válido.',
+        confirmButtonText: 'Intentar de nuevo'
+      })
       return
     }
 
-    alert('Ya estás suscrito, pronto te llegarán las notificaciones.')
+    swalWithCustomClass.fire({
+      icon: 'success',
+      title: '¡Suscripción exitosa!',
+      text: 'Ya estás suscrito, pronto te llegarán las notificaciones.',
+      confirmButtonText: 'Aceptar'
+    })
+
     setEmail('')
   }
 
