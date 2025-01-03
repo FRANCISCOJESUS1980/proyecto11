@@ -61,7 +61,7 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--segundo-color);
+  color: var(--primer-color);
   font-weight: 500;
   padding: var(--rc-padding1);
   transition: all 0.3s ease;
