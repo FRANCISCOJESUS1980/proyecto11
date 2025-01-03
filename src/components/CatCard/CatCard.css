@@ -4,6 +4,9 @@
   padding: 10px;
   text-align: center;
 }
+.cat-card:hover {
+  border: 2px solid var(--primer-color);
+}
 .cat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
