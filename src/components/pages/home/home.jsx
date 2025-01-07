@@ -31,7 +31,7 @@ function Home() {
   }
 
   useEffect(() => {
-    loadCats(1)
+    loadCats(10)
   }, [])
 
   return (
