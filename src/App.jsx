@@ -15,6 +15,7 @@ function App() {
         <Route path='/cat/:id' element={<CatDetails />} />
         <Route path='/search' element={<Search />} />
         <Route path='/favorites' element={<Favorites />} />
+        <Route path='*' element={<Favorites />} />
       </Routes>
       <Footer />
     </Router>
